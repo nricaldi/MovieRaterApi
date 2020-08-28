@@ -95,9 +95,9 @@ REST_FRAMEWORK = {
 #     "http://localhost:4200",
 # ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:4200",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
