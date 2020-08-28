@@ -16,9 +16,10 @@ class UserViewSet(viewsets.ModelViewSet):
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
-    authentication_classes = (IsAuthenticated, )
+    authentication_classes = (TokenAuthentication, ) # DO NOT USE IsAuthenticated ****** it will save you a headache
     # blocks access to movies unless logged in with valid token
     # AllowAny gives access to non users
+
     permission_classes = (IsAuthenticated, )
 
     # the @action decorating our def with extra values
@@ -76,4 +77,3 @@ class RatingViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         response = {'message': "You can't update rating like that"}
         return Response(response, status=status.HTTP_400_BAD_REQUEST)
-

@@ -1,3 +1,19 @@
-.idea
-.vscode
-venv
+# /.idea
+# venv
+
+# *.log
+# *.pot
+# *.pyc
+# __pycache__/
+# local_settings.py
+# db.sqlite3
+# db.sqlite3-journal
+# media
+
+# # IDE - VSCode
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# .history/*
