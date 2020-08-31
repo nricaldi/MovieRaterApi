@@ -12,6 +12,9 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    # View set must always have permission classes!!!!!!!!!!
+    permission_classes = (AllowAny, ) # View set must always have permission classes!!!!!!!!!!
+    # View set must always have permission classes!!!!!!!!!!
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
